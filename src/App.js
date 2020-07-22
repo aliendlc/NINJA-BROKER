@@ -1,12 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useContext} from 'react';
+import {firebaseAuth} from './provider/AuthProvider'
+
 import './App.css';
 
 function App() {
+  const {test} = useContext(firebaseAuth)
+  console.log(test)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
